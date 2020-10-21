@@ -4,7 +4,7 @@ const { connect } = require("./connection")
 var orm = {
     updateAll: function() {
         connection.query("UPDATE FROM burgers WHERE id = ?", [id], function(err,res){
-            //code?
+            
             if (err) {
                 throw err;
             }
@@ -14,7 +14,7 @@ var orm = {
     
     insertOne: function() {
         connection.query("INSERT ONE FROM burgers WHERE id = ?", [id], function(err,res){
-            //code?
+            
             if (err) {
                 throw err;
             }
@@ -24,7 +24,7 @@ var orm = {
 
     selectOne: function() {
         connection.query("SELECT ONE FROM burgers WHERE id = ?", [id], function(err,res){
-            //code?
+            
             if (err) {
                 throw err;
             }

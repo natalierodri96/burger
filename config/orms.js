@@ -17,8 +17,8 @@ var orm = {
             //code?
             if (err) {
                 throw err;
-                callback(res);
             }
+            callback(res);
         });
     };
 
@@ -27,8 +27,8 @@ var orm = {
             //code?
             if (err) {
                 throw err;
-                callback(res); 
             }
+            callback(res);
         });
     };
 }

@@ -1,7 +1,9 @@
- var express = require("express");
+//variables
+var express = require("express");
  var burger = require("../models/burgers.js");
-
+//router
  var router = express.Router();
+ //selectAll
  router.get("/", function(req, res) {
      burger.selectAll(function(data) {
          var hdbarsObj = {
@@ -10,6 +12,7 @@
          console.log(hdbarsObj);
          res.render("index", hdbarsObj);
      });
+//insertOne
      router.post("api/burgers",function(req, res) {
          burger.insertOne(
              ["burger_name", "devoured"],
@@ -19,6 +22,7 @@
              }
          );
      });
+     //updateOne
      router.put("api/burgers/:id", function(req, res) {
          var condition = "id = " + req.params.id;
          console.log("condition", condition);

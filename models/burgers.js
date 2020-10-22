@@ -1,6 +1,9 @@
+//variables
 var orm = require("../config/orm.js");
 
 var burger = {
+//functions
+
     all: function(cb) {
         orm.selectAll("burgers", function(res) {
             cb(res);

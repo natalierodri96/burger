@@ -1,6 +1,8 @@
+//connect
 const connection = require("./connection")
 const { connect } = require("./connection")
 
+//fuctions
 var orm = {
     updateAll: function() {
         connection.query("UPDATE FROM burgers WHERE id = ?", [id], function(err,res){
